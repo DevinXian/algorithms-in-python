@@ -1,4 +1,6 @@
-def insert_sort(list):
+from typing import List
+
+def insert_sort(list: List[int]) -> List[int]:
     length = len(list)
 
     for pos in range(1, length):
@@ -27,7 +29,7 @@ def insert_sort2(list):
         index = pos - 1
 
         # is left element bigger than val
-        while list[index] > val and index > 0:
+        while list[index] > val and index >= 0:
             # move to right
             list[index + 1] = list[index]
             index -= 1
